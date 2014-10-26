@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Node Forward is a broad community effort to improve Node, JavaScript, and their ecosystem through open collaboration.">
+    <meta name="keywords" content="node-forward, node forward, node, node.js, node.js forward, nodejs, nodejs forward, javascript">
+    <meta name="author" content="Mikeal Rogers">
+
+    <title>Node Forward</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+  </head>
+
+  <body id="body">
+    <div id="header">
+
+      <img id="logo" src="node-forward.png">
+
+      <h2>Welcome!</h2>
+      <p class="splash"><code id="splash"></code></p>
+    </div>
+    <div id="content">
+      <!-- <h3 class="involved">Are you new to Programming?</h3> -->
+
+      <h3 class="involved">Are you new to JavaScript?</h3>
+
+      <p>There is a quick and fun tutorial called <a href="http://jsforcats.com/">JS For Cats</a>.</p>
+
+      <p>If you're interested in how specific language features and types work the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Mozilla Developer Network</a> has excellent documentation on JavaScript.</p>
+
+      <p>If you're comfortable using your computer's terminal application then you may want to install Node and work your way through the <a href="https://github.com/sethvincent/javascripting">javascripting</a> workshopper.</p>
+
+      <h3 class="involved">Are you new to Node?</h3>
+
+      <p>The best guide to learning Node once you have some basic JavaScript knowledge is <a href="https://github.com/maxogden/art-of-node">"Art of Node"</a>. The guide not only introduces many fundamental concepts but will also send you to various tutorials and other important resources.</p>
+
+      <p>Once you're comfortable with Node you may want to learn a bit more about some of the most widely accepted practices which are covered well in the <a href="https://github.com/FredKSchott/NodeJS-Handbook">Node Handbook</a>.</p>
+
+      <h3 class="involved">Would you like to be more involved?</h3>
+
+      <p>You can give feedback and contribute to this <a href="https://github.com/node-forward/welcome">welcome page</a>.</p>
+
+      <p>You can attend or event start a local chapter of <a href="http://nodeschool.io/">Node School</a> to help educate and grow your local community.</p>
+
+      <p>The <a href="http://nodeforward.org/">Node Forward</a> website has a list of other projects you may want to get involved in as well.</p>
+
+    </div>
+  </body>
+  <script>
+    document.addEventListener('DOMContentLoaded' , function() {
+      // fade in ;D
+      document.getElementById('body').classList.add('loaded')
+
+      // get awesome splash texts of awesomeness.
+      // using superagent because it's node-like and cool.
+
+      var splashes =
+        [ "<3"
+        , "very node!"
+        , "npm loves you!"
+        , "NaN is a Number!"
+        , "Kittens!"
+        , "Community!"
+        , "Easy to learn!"
+        , "Powerful!"
+        , "Over 9000!"
+        , "JavaScript!"
+        , "Nodebots!"
+        , "Won't eat your laundry!*"
+        , "NodeConf!"
+        , "^_^"
+        , "Multinational!"
+        , "Open!"
+        , "Open Source!"
+        , "Welcome!"
+        , "Contributions Welcome!"
+        , "We Are All Awesome!"
+        , "Global!"
+        , "Futuristic!"
+        , "V8!"
+        , "libuv!"
+      ]
+
+
+      var i = (splashes.length * Math.random())>>0 // bitwise floor() magic
+
+      document.getElementById('splash').textContent = splashes[i]
+    })
+  </script>
+</html>
